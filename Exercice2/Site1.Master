@@ -1,0 +1,176 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Exercice2.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<style>
+        #header
+        {
+            width:100%;
+            height:65px;
+            background-color:whitesmoke;
+        }
+  
+   #la {
+     float:left;
+            margin-top:20px;
+            margin-left:5%;
+            text-decoration:none;
+            width:120px;
+            text-align:center;
+            height:30px;
+            cursor:pointer;
+            border-radius:5px;
+    }
+     #pi {
+          float:left;
+            margin-top:20px;
+            margin-left:5%;
+            text-decoration:none;
+            width:140px;
+            text-align:center;
+            height:30px;
+            cursor:pointer;
+            border-radius:5px;
+     }
+     #au{
+           float:left;
+            margin-top:20px;
+            margin-left:5%;
+            text-decoration:none;
+            width:140px;
+            text-align:center;
+            height:30px;
+            cursor:pointer;
+            border-radius:5px;
+     }
+  
+     #admin_{
+              float:right;
+            margin-top:20px;
+          margin-right:25%;
+            text-decoration:none;
+            width:180px;
+            text-align:center;
+            height:30px;
+            cursor:pointer;
+            border-radius:5px;
+     }
+     #admin_ a{
+           text-decoration:none;
+         color:black;
+     }
+     #Menu_admin
+     {
+                float:right;
+            margin-top:20px;
+          margin-right:25%;
+            text-decoration:none;
+            width:180px;
+            text-align:center;
+            height:30px;
+            cursor:pointer;
+            border-radius:5px;
+     }
+     #admin:hover{
+          text-decoration:none;
+         color:black;
+         border-style:solid;
+         border-width:1px;
+     }
+     #admin a{
+          text-decoration:none;
+         color:black;
+     }
+     #au a{
+           text-decoration:none;
+         color:black;
+     }
+     #au:hover{
+             border-style:solid;
+         border-width:1px;
+         background-color:lightseagreen;
+         color:white;
+     }
+      #la a{
+         text-decoration:none;
+         color:black;
+     }
+      
+       #pi a{
+           text-decoration:none;
+           color:black;
+       }
+      #pi:hover
+     {
+              border-style:solid;
+         border-width:1px;
+         background-color:lightseagreen;
+         color:white;
+
+     }
+      #la:hover
+      {
+              border-style:solid;
+         border-width:1px;
+           background-color:lightseagreen;
+         color:white;
+      }
+    </style>
+    <form id="form1" runat="server">
+        <div id="header">
+                
+                    <a href="WebForm1.aspx">
+                    <div id="la">
+                        List des articles
+                    </div>
+                    </a> 
+               
+               
+                    <a href="WebForm2.aspx">
+                         <div id="pi">
+                             Inscription
+                         </div>
+
+                    </a>
+               
+             
+                    <a href="authentification.aspx">
+                        <div id="au"> 
+                            Authentification
+                        </div>
+                    </a>
+
+            <div id="admin_">
+                <asp:Menu runat="server" ID="Menu_admin">
+                    <Items>
+                        <asp:MenuItem Text="Espace Administrateure">
+                        <asp:MenuItem Text="Authentification" NavigateUrl="#"/>
+                        <asp:MenuItem Text="AGestion des clients" NavigateUrl="#"/>
+                        <asp:MenuItem Text="Gestion des articles" NavigateUrl="#"/>
+                        <asp:MenuItem Text="Consultation des commandes" NavigateUrl="#"/>
+                            </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+               
+        
+                        
+                        
+            </div>
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
